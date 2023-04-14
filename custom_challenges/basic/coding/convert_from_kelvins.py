@@ -27,7 +27,7 @@ def convert_temperature(temperature_kelvins: int | float, to_convert: str) -> in
 
 def run_test():
     import sys
-    sys.path.append('.....')
+    sys.path.append('..')
     from challenge_utils.unit_tests import UnitTest
     from challenge_utils.generate_id import generate_id
     test = UnitTest()
