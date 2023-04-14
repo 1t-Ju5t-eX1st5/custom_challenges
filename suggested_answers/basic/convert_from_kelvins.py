@@ -3,8 +3,7 @@ Task:
 
 Given a temperature (in Kelvins) and the temperature unit to convert to, write
 a function that will return the converted temperature rounded to 2
-decimal places. Assume that all values provided are
-valid
+decimal places. Assume that all values provided are valid
 
 Formula References:
 Kelvins to Celsius: K - 273.15
@@ -30,8 +29,7 @@ def run_test():
     sys.path.append('..')
     from challenge_utils.unit_tests import UnitTest
     from challenge_utils.generate_id import generate_id
-    test = UnitTest()
-    CHALLENGE_ID = generate_id(__file__)
+    test = UnitTest(generate_id(__file__))
 
     # Basic Tests - Fahrenheit
     print(test.assert_equals(lambda: convert_temperature(0, "F"), -459.67))

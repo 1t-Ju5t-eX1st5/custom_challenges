@@ -1,3 +1,5 @@
+from challenge_utils import generate_samples
+
 import datetime
 
 class UnitTest():
@@ -8,8 +10,9 @@ class UnitTest():
     assert_equals: runs a given function, then checks if the result obtains is the same as the expected result or not, as well as the runtime (in milliseconds)
     calculate_runtime: calculates the runtime for a given function
     """
-    def __init__(self, challenge_id: str):
-        self.challenge_id = challenge_id or ""
+    def __init__(self):
+        self.upper_alphabet = generate_samples.generate_alphabet()['list-format']['uppercase']
+        self.lower_alphabet = generate_samples.generate_alphabet()['list-format']['uppercase']
     
     def assert_equals(self, code_to_test, expected_result) -> str:
         """

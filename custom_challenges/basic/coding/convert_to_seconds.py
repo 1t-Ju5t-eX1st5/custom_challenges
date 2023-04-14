@@ -24,8 +24,7 @@ def run_test():
     sys.path.append('..')
     from challenge_utils.unit_tests import UnitTest
     from challenge_utils.generate_id import generate_id
-    test = UnitTest()
-    CHALLENGE_ID = generate_id(__file__)
+    test = UnitTest(generate_id(__file__))
 
     # Standard tests
     print(test.assert_equals(lambda: convert_to_seconds(0, 0, 1, 55), 115))
