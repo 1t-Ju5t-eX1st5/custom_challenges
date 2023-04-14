@@ -9,8 +9,19 @@ Challenge ID: 7d9e9d94e3764862
 """
 
 def find_largest_number(lst: list) -> int | float | bool:
-    # Your code here
-    return False
+    filtered_list = []
+    for char in lst:
+        if str(char).isnumeric():
+            filtered_list.append(int(char))
+        else:
+            pass
+    if len(filtered_list) < len(lst):
+        return False
+    largest_num = 0
+    for num in lst:
+        if int(num) > largest_num:
+            largest_num = int(num)
+    return largest_num
 
 ######################################################
 #                                                    #
@@ -41,6 +52,7 @@ def run_test():
     print(test.assert_equals(lambda: find_largest_number(['5', '7', '9', '11']), 11))    # Sike. This is a valid data set :P
     print(test.assert_equals(lambda: find_largest_number([False, True, False, False, True]), False))
 
+    # Random tests
 
 if __name__ == "__main__":
     run_test()
