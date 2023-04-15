@@ -1,16 +1,29 @@
 """
 Task:
 Given a list of values, return the largest number in the list
-
+If no valid values are found, return False
 Challenge notes: Using the min() or max() function is considered cheating
-Return False if there are any non-numeric characters in the list
+Return False as well if there are any non-numeric characters in the list
 
 Challenge ID: 7d9e9d94e3764862
 """
 
 def find_largest_number(lst: list) -> int | float | bool:
-    # Your code here
-    return False
+    if len(lst) < 1:
+        return False
+    filtered_list = []
+    for char in lst:
+        if type(char) == int or str(char).isnumeric():
+            filtered_list.append(int(char))
+        else:
+            pass
+    if len(filtered_list) < len(lst):
+        return False
+    largest_num = filtered_list[0]
+    for num in lst:
+        if int(num) > largest_num:
+            largest_num = int(num)
+    return largest_num
 
 ######################################################
 #                                                    #

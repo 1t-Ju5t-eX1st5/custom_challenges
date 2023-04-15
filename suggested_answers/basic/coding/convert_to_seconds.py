@@ -9,8 +9,7 @@ Challenge ID: fa45de6d1aaf0dcb
 """
 
 def convert_to_seconds(days: int, hours: int, minutes: int, seconds: int) -> int:
-    # Your code here
-    return 0
+    return (days * 86400) + (hours * 3600) + (minutes * 60) + seconds
 
 ######################################################
 #                                                    #

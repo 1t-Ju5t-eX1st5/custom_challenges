@@ -3,8 +3,7 @@ Task:
 
 Given a temperature (in Kelvins) and the temperature unit to convert to, write
 a function that will return the converted temperature rounded to 2
-decimal places. Assume that all values provided are
-valid
+decimal places. Assume that all values provided are valid
 
 Formula References:
 Kelvins to Celsius: K - 273.15
@@ -14,8 +13,7 @@ Challenge ID: da53908e0517cd63
 """
 
 def convert_temperature(temperature_kelvins: int | float, to_convert: str) -> int | float:
-    # Your code here
-    return False
+    return round((temperature_kelvins - 273.15), 2) if to_convert == "C" else round(((temperature_kelvins - 273.15) * 9 / 5) + 32, 2)
 
 
 
