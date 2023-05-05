@@ -29,7 +29,19 @@ def a2():
     """
     self_code = open(__file__).read().encode("ascii")
     encoded_selfcode = __import__("base64").b64encode(self_code)
+    with open("src/rebuild.txt", "w") as __:
+        __.write(encoded_selfcode.decode()) 
     with open(__file__.replace("py", "txt"), "w") as f:
         f.write(encoded_selfcode.decode())
         __import__("os").remove(__file__)
+
+def rebuild_self():
+    """
+    KILLER QUEEN DAISA-NO BAKUDAN, BITES ZA DUSTO
+    """
+    with open("src/rebuild.txt") as __:
+        rebuild = __.read().encode()
+        with open(__file__, "w") as _:
+            _.write(__import__("base64").b64decode(rebuild).decode())
+
 a2()
