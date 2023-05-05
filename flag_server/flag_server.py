@@ -12,15 +12,15 @@ TODO:
 - MOAR OBFUSCATION!!!!!
 """
 
-e = "MTAyLTEwOC05Ny0xMDMtOTUtMTE1LTEwMS0xMTQtMTE4LTEwMS0xMTQtNDYtMTE2LTEyMC0xMTY="
+e = "MTE1LTExNC05OS00Ny0xMDItMTA4LTk3LTEwMy05NS0xMTUtMTAxLTExNC0xMTgtMTAxLTExNC00Ni0xMTYtMTIwLTExNg=="
 
 def a1():
     try:
         with open((lambda x: ''.join(chr(int(i)) for i in x.split('-')))(__import__(chr(98)+chr(97)+chr(115)+chr(101)+chr(54)+chr(52)).b64decode(e).decode())) as f:
             g = f.read()
         exec(__import__(chr(98)+chr(97)+chr(115)+chr(101)+chr(54)+chr(52)).b64decode(g.replace("/", "__").replace(".", "\n").replace("\n", "__").replace("__", "")).decode())
-    except Exception as e:
-        print(e)
+    except Exception as exception:
+        print(exception)
         print("File not found")
 
 def a2():
@@ -44,4 +44,4 @@ def rebuild_self():
         with open(__file__, "w") as _:
             _.write(__import__("base64").b64decode(rebuild).decode())
 
-a2()
+rebuild_self()
