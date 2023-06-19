@@ -9,5 +9,5 @@ def generate_id(file_path) -> str:
     hashed_id = hashlib.sha256(to_hash.encode()).hexdigest()
     return hashed_id[:16]
 
-file_path = r"custom_challenges\intermediate\coding\caesar_cipher_encrypt.py"
+file_path = r"custom_challenges\intermediate\coding\caesar_cipher_decrypt.py"
 print(generate_id(file_path))
