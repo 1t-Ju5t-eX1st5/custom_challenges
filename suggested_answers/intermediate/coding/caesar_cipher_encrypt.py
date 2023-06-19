@@ -21,8 +21,23 @@ Challenge ID: 16814d93170c8911
 """
 
 def caesar_encrypt(plaintext: str, s: int) -> str:
-    # Your code here
-    return ""
+    temp_char, encrypted = 0, ""
+    for char in plaintext:
+        if char.islower():
+            temp_char = ord(char) + s
+            while temp_char > 122:
+                temp_char = temp_char - 122 + 96
+
+            encrypted += chr(temp_char)
+        elif char.isupper():
+            temp_char = ord(char) + s
+            while temp_char > 90:
+                temp_char = temp_char - 90 + 64
+            encrypted += chr(temp_char)
+        else:
+            encrypted += char
+
+    return encrypted
 
 ######################################################
 #                                                    #
@@ -39,7 +54,7 @@ class Test_TemplateChallenge(unittest.TestCase):
         self.assertEqual(caesar_encrypt("Hello123", 3), "Khoor123")
     
     def test_full_cases(self):
-        self.assertEqual(caesar_encrypt("Hello, World!", 3), "Mjqqt, Btwqi!")
+        self.assertEqual(caesar_encrypt("Hello, World!", 3), "Khoor, Zruog!")
         self.assertEqual(caesar_encrypt("Caesar Cipher", -3), "Xxvpwo Zfedmo")
         self.assertEqual(caesar_encrypt("Yes But No", 17), "Hnb Kdc Wx")
         self.assertEqual(caesar_encrypt("1s_7h1s_a_fl4g?", -25), "1r_7g1r_z_ek4f?")
