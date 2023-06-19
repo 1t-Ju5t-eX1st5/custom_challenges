@@ -5,7 +5,7 @@ Given a list of values, return the largest number in the list
 Challenge notes: Using the min() or max() function is considered cheating
 Return False if there are any non-numeric characters in the list
 
-Challenge ID: 7d9e9d94e3764862
+Challenge ID: 2a8445759c857724
 """
 
 def find_largest_number(lst: list) -> int | float | bool:

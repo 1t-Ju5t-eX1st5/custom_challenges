@@ -5,7 +5,7 @@ Write a program that will take the number of days, hours, minutes and seconds an
 return the total number of seconds
 Assume that all data is valid
 
-Challenge ID: fa45de6d1aaf0dcb
+Challenge ID: d4603c5106c2682b
 """
 
 def convert_to_seconds(days: int, hours: int, minutes: int, seconds: int) -> int:
